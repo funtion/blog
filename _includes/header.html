@@ -4,8 +4,15 @@
 
         <ul class="menu">
             <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
-            <!-- <li class="menu__entry"><a href="{{ '/tags' | prepend: site.baseurl }}">Tags</a></li>
-            <li class="menu__entry"><a href="{{ '/archive' | prepend: site.baseurl }}">Archive</a></li> -->
+            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Tags</a></li>
+            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Archive</a></li>
+            <li class="menu__entry"><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS</a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">All Categories</a></li>
+            {% for category in site.data.categories %}
+                <li class="menu__entry"><a href="{{ '/categories/' | append: category.slug | prepend: site.baseurl }}">{{ category.name }}</a></li>
+            {% endfor %}
         </ul>
     </div>
 
