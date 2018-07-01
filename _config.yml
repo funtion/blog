@@ -26,3 +26,6 @@ highlighter: null
 markdown: kramdown
 
 permalink: /post/:categories/:title
+
+sass:
+  style: compressed
