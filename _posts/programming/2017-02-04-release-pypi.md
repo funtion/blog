@@ -2,7 +2,7 @@
 layout: post
 date: 2017-02-04 20:31
 status: public
-tags: 'Python, PyPi, Release, Praise, Package, Pip'
+tags: [python, PyPi, release, praise, package, pip]
 title: '发布你自己的 PyPI 包'
 categories: [Programming]
 ---

@@ -2,7 +2,7 @@
 layout: post
 date: 2017-01-11 21:55
 status: public
-tag: 'Python, notebook, SSH, remote, server, 远程服务, 教程'
+tag: [python, notebook, SSH, remote, server, 远程服务, 教程]
 title: '创建 IPython Notebook 远程服务'
 categories: [Programming]
 ---

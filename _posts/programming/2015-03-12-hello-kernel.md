@@ -2,7 +2,7 @@
 layout: post
 date: 2015-03-12 13:49
 status: public
-tags: Linux,kernal,sys-call,操作系统,系统调用
+tags: [linux, kernal, sys-call, 操作系统, 系统调用]
 title: '向 Linux 增加系统调用'
 categories: [Programming]
 ---

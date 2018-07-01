@@ -2,7 +2,7 @@
 layout: post
 date: 2016-11-26 22:00
 status: public
-tags: GBDT,Rank,Search,Decision-Tree,Boosting,Algorithm
+tags: [GBDT, ranking, search, decision-tree, boosting, algorithm]
 title: 'GB-Rank -- 一种排序算法'
 categories: [Machine-Learning]
 ---

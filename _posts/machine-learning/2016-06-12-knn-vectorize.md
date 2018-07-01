@@ -2,7 +2,7 @@
 layout: post
 date: 2016-06-12 15:30
 status: public
-tags: 'K-Nearest-Neighbors,Vectorize,Python, Numpy, Algorithm'
+tags: [k-nearest-neighbors, vectorize, python, numpy, algorithm]
 title: 'K-Nearest Neighbors 的 vectorize 方法'
 categories: [Machine-Learning]
 ---

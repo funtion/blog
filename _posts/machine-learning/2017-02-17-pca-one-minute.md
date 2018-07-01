@@ -2,7 +2,7 @@
 layout: post
 date: 2017-02-17 21:06
 status: public
-tags: 'PCA, 线性代数, 矩阵, 特征值, 变换'
+tags: [PCA, 线性代数, 矩阵, 特征值, 变换]
 title: '一分钟理解 PCA 的原理'
 categories: [Machine-Learning]
 ---

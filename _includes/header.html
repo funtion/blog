@@ -4,8 +4,8 @@
 
         <ul class="menu">
             <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
-            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Tags</a></li>
-            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Archive</a></li>
+            <li class="menu__entry"><a href="{{ '/tags' | prepend: site.baseurl }}">Tags</a></li>
+            <!-- <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Archive</a></li> -->
             <li class="menu__entry"><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS</a></li>
         </ul>
         <ul class="menu">
@@ -15,7 +15,6 @@
             {% endfor %}
         </ul>
     </div>
-
     <ul class="social-links">
         {% if site.author.github %}
             <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">

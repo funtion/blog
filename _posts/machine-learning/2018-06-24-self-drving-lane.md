@@ -3,7 +3,7 @@ layout: post
 title: 自动驾驶之车道检测
 date: 2018-06-24 15:42
 status: public
-tags: '自动驾驶, 机器视觉, 车道检测, Canny, Hough, OpenCV'
+tags: [自动驾驶, 机器视觉, 车道检测, canny, hough, open-cv]
 categories: [Machine-Learning]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 date: 2016-12-17 17:51
 status: public
-tags: '思考, 批判性思考, 读书笔记, 提问'
+tags: [思考, 批判性思考, 读书笔记, 提问]
 title: '学会提问 -- 如何学会批判性思考'
 categories: [Thinking]
 ---

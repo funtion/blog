@@ -2,7 +2,7 @@
 layout: post
 date: 2016-12-11 17:22
 status: public
-tags: EM, Algorithm, probility, statistics, Maximum-Likelihood, 算法, 统计, 概率, 最大似然
+tags: [EM, algorithm, probility, statistics, maximum-likelihood, 算法, 统计, 概率, 最大似然]
 title: '闲话 EM 算法'
 categories: [Machine-Learning]
 ---

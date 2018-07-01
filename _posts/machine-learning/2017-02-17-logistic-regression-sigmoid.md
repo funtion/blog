@@ -2,7 +2,7 @@
 layout: post
 date: 2017-02-17 22:51
 status: public
-tags: 'logistic, regression, sigmoid,bayesian,probility,softmax'
+tags: [logistic, regression, sigmoid, bayesian, probility, softmax]
 title: '理解 Logistic 回归的原理'
 categories: [Machine-Learning]
 ---
@@ -55,7 +55,7 @@ $$
 P(c_1|X) = \frac{1}{1 + e^{X^TW}} ，其中 X^TW = \ln{\frac{P(X|c_2)*P(c_2)}{P(X|c_1)*P(c_1)}}
 $$
 
-当然这里还遗留了一个小问题，就是随着 $WX$ 的增大，$P(c_1|x)$的值是变小的。为了更加符合直观感受，通常我们用的是$y = e^{-x}$ 作为变换。这样就得到在最开始给出的公式。
+当然这里还遗留了一个小问题，就是随着 $WX$ 的增大，$$ P(c_1 \| x) $$的值是变小的。为了更加符合直观感受，通常我们用的是$y = e^{-x}$ 作为变换。这样就得到在最开始给出的公式。
 
 进一步的，从
 

@@ -2,7 +2,7 @@
 layout: post
 date: 2017-08-27 21:57
 status: public
-tags: git, rebase, cherry-pick, tips, 修改历史
+tags: [git, rebase, cherry-pick, tips, 修改历史]
 title: 'Git 进阶'
 categories: [Programming]
 ---

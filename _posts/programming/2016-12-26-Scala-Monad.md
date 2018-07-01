@@ -2,7 +2,7 @@
 layout: post
 date: 2016-12-26 21:32
 status: public
-tags: 'Scala, Monad, Functor,Applicative, Monoid, 教程, 函数式编程'
+tags: [scala, monad, functor, applicative, monoid, 教程, 函数式编程]
 title: 'Monad 简明教程 -- Scala 表述'
 categories: [Programming]
 ---

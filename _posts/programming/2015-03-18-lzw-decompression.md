@@ -2,7 +2,7 @@
 layout: post
 date: 2015-03-18 14:26
 status: public
-tags: Algorithm,LZW,Compression
+tags: [algorithm, LZW, compression]
 title: 'LZW 算法之解压'
 categories: [Programming]
 ---

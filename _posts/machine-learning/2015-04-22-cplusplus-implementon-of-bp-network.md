@@ -2,7 +2,7 @@
 layout: post
 date: 2015-04-22 10:17
 status: public
-tags: 'Neural Network, Backpropagation, c++'
+tags: [neural-network, backpropagation, c++]
 title: 'C++ 实现backpropagation神经网络'
 categories: [Machine-Learning]
 ---

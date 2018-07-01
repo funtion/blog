@@ -2,7 +2,7 @@
 layout: post
 date: 2016-06-02 22:46
 status: public
-tags: 'CUDA, Keras, Python, Deep Learning'
+tags: [CUDA, keras, python, deep-learning]
 title: 'Windows 系统中 Keras 深度学习环境的配置'
 categories: [Machine-Learning]
 ---
