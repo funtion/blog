@@ -12,7 +12,8 @@ author:
   # twitter: electrik_frog
   # disqus: your_disqus_forum_shortname
 
-# google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-88279926-1'
+cnzz: true
 
 # Syntax highlighting
 highlightstyle: ''
