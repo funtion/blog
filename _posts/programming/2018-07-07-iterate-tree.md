@@ -30,18 +30,18 @@ void visit_recursive(shared_ptr<Node> node)
 
 ```C++
 // 由于 lambda 引用了调用栈上的元素，实际是无法进行尾递归优化的
-void visit_tail(const shared_ptr<Node> node, const function<void()> cont)
+void visit_tail(const shared_ptr<Node> node, const function<void()> continuation)
 {
     auto next = [&]()
     {
         cout << node->value << endl;
         if (node->right)
         {
-            visit_tail(node->right, cont);
+            visit_tail(node->right, continuation);
         }
         else
         {
-            cont();
+            continuation();
         }
     };
 
@@ -59,9 +59,9 @@ void visit_tail(const shared_ptr<Node> node, const function<void()> cont)
 ## 一行尾递归
 
 ```C++
-void visit_tail(const shared_ptr<Node> node, const function<void()> cont)
+void visit_tail(const shared_ptr<Node> node, const function<void()> continuation)
 {
-    node ? visit_tail(node->left, [&]() { cout << node->value << endl; visit_tail(node->right, cont); }) : cont();
+    node ? visit_tail(node->left, [&]() { cout << node->value << endl; visit_tail(node->right, continuation); }) : continuation();
 }
 ```
 
@@ -72,7 +72,7 @@ void visit_loop(const shared_ptr<Node> node)
 {
     shared_ptr<Node> curNode = node;
     bool finsihed = false;
-    function<void()> curCont = [&]()
+    function<void()> curContinuation = [&]()
     {
         finsihed = true;
     };
@@ -80,25 +80,25 @@ void visit_loop(const shared_ptr<Node> node)
     while (!finsihed)
     {
         shared_ptr<Node> curNodeCopy = curNode;
-        function<void()> curContCopy = curCont;
-        auto next = [&curNode, &curCont, curNodeCopy, curContCopy]()
+        function<void()> curContinuationCopy = curContinuation;
+        auto next = [&curNode, &curContinuation, curNodeCopy, curContinuationCopy]()
         {
             cout << curNodeCopy->value << endl;
             if (curNodeCopy->right)
             {
                 curNode = curNodeCopy->right;
-                curCont = curContCopy;
+                curContinuation = curContinuationCopy;
             }
             else
             {
-                curContCopy();
+                curContinuationCopy();
             }
         };
 
         if (curNode->left)
         {
             curNode = curNode->left;
-            curCont = next;
+            curContinuation = next;
         }
         else
         {
@@ -114,7 +114,7 @@ void visit_loop(const shared_ptr<Node> node)
 void visit_stack(const shared_ptr<Node> node)
 {
     stack<shared_ptr<Node>> nodes;
-    stack<function<void()>> conts;
+    stack<function<void()>> continuations;
 
     nodes.push(node);
 
@@ -129,34 +129,34 @@ void visit_stack(const shared_ptr<Node> node)
         steps[1] = [&]()
         {
             auto curNode = nodes.top();
-            conts.push(steps[2]);
+            continuations.push(steps[2]);
             cout << curNode->value << endl;
             if (curNode->right)
             {
                 nodes.push(curNode->right);
-                conts.push(steps[0]);
+                continuations.push(steps[0]);
             }
         };
 
         steps[0] = [&]()
         {
             auto curNode = nodes.top();
-            conts.push(steps[1]);
+            continuations.push(steps[1]);
             if (curNode->left)
             {
                 nodes.push(curNode->left);
-                conts.push(steps[0]);
+                continuations.push(steps[0]);
             }
         };
 
-        if (conts.empty())
+        if (continuations.empty())
         {
             steps[0]();
         }
         else
         {
-            auto curCnt = conts.top();
-            conts.pop();
+            auto curCnt = continuations.top();
+            continuations.pop();
             curCnt();
         }
     }
