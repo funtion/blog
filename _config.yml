@@ -30,3 +30,6 @@ permalink: /post/:categories/:title
 
 sass:
   style: compressed
+
+timezone: Asia/Shanghai
+
