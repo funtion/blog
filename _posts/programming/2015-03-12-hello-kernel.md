@@ -37,11 +37,11 @@ ccache -s
 #include <linux/kernel.h>
 asmlinkage long sys_hello(void)
 {
-        printk(“hello kernel ”);
+        printk("hello kernel");
         return 0;
 }
 ```
-只是用printk在内核里输出一个 “hello kernel“。
+只是用printk在内核里输出一个 "hello kernel"。
 同时在/usr/src/linux-3.19.1/inclue/linux/syscalls.h最后增加
 ```
 asmlinkage long sys_hello(void);
